@@ -64,3 +64,9 @@ input.inputClass {
     position: relative;
     left: 73%;
 }
+
+/*  */
+span.span-inputfield {
+    position: relative;
+    right: 75%;
+}

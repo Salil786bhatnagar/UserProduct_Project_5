@@ -14,18 +14,27 @@ import InputUpdateValue from './Component/&1Reactjs_Testing/InputUpdateValue';
 import CallApi_Axios from './Component/&1Reactjs_Testing/CallApi_Axios';
 import CallApi_Fetch from './Component/&1Reactjs_Testing/CallApi_Fetch'
 import ParentData from './Component/&1Reactjs_Testing/Parent';
+import Signin from './Component/Signin';
 function App(props) {
   return (
     <div className="App">
      {/* <Homepage/> */}
       <Router>
+        <Route 
+            path="/"
+            component={Signin}
+            exact
+            strict
+            history={props.history}
+          />
          <Route 
-           path="/"
+           path="/Homepage"
            component={Homepage}
            exact
            strict
            history={props.history}
          />
+         
          <Route 
            path="/Categories"
            component={Categories}
@@ -40,6 +49,7 @@ function App(props) {
            strict
            history={props.history}
          />
+
         <Route 
            path="/Currentpage/:id/:category/:price/:rate/:count/:title/:description"
            component={Currentpage}
@@ -47,6 +57,7 @@ function App(props) {
            strict
            history={props.history}
          />
+
           <Route 
            path="/Search"
            component={Search}
